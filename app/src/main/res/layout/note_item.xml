@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/note"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:layout_marginHorizontal="5dp"
+    android:paddingVertical="5dp"
+    android:paddingHorizontal="10dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="Title of To Do jfrenbfu ierfi ruirehi uh rieu  uheu r h eiu"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_toStartOf="@id/tvDate"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="16/06/2022"
+        android:textSize="11sp"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Do Description jfiuwerfiu hiuhfuirhefu hreiugwy we Lrihd d de Lopewb uurm Lirnenreknfnre hbdfbrfbe refnerfnerf fberbf n"
+        android:textColor="@color/gray"
+        android:layout_below="@+id/tvTitle"
+        android:lines="2"
+        />
+
+</RelativeLayout>
