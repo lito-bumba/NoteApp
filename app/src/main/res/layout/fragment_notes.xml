@@ -1,42 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     tools:context=".presentation.note_list.NotesScreen">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNotes"
+    <include
+        android:id="@+id/main_front"
+        layout="@layout/activity_main_front"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/note_item"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabList"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/add"
-        android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="@color/primary" />
+        android:layout_height="match_parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/green"
         android:contentDescription="@string/add"
-        android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="@color/primary" />
+        android:src="@drawable/ic_baseline_add_24" />
 
 </RelativeLayout>

@@ -12,14 +12,7 @@ class AddNoteViewModel @Inject constructor(
     private val useCases: UseCases
 ) : ViewModel() {
 
-    private var _note = MutableLiveData<Note?>()
-    val note: LiveData<Note?> = _note
-
-    fun getToAdd(noteItem: Note){
-        _note.value = noteItem
-    }
-
-    fun addNote(note: Note){
+    fun addNote(note: Note) {
         viewModelScope.launch {
             useCases.addNote(note)
         }

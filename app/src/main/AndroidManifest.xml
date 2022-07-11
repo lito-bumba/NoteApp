@@ -15,6 +15,9 @@
         android:theme="@style/Theme.NoteApp"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.note_add_edit.NoteScreen"
+            android:exported="false" />
+        <activity
             android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>

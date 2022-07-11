@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/main">
+    app:startDestination="@id/screenNotes">
 
     <fragment
-        android:id="@+id/main"
+        android:id="@+id/screenNotes"
         android:name="com.litobumba.noteapp.presentation.note_list.NotesScreen"
         android:label="Notes"
         tools:layout="@layout/fragment_notes">
         <action
             android:id="@+id/action_main_to_note"
-            app:destination="@id/note" />
+            app:destination="@id/noteScreen" />
     </fragment>
-    <fragment
-        android:id="@+id/note"
-        android:name="com.litobumba.noteapp.presentation.note_add_edit.AddNote"
-        android:label="Note"
-        tools:layout="@layout/fragment_note">
-    </fragment>
+
+    <activity
+        android:id="@+id/noteScreen"
+        android:name="com.litobumba.noteapp.presentation.note_add_edit.NoteScreen"
+        android:label="Activity"
+        tools:layout="@layout/note_screen"/>
+
 </navigation>

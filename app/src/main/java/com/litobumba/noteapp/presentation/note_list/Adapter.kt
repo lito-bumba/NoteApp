@@ -10,7 +10,6 @@ import com.litobumba.noteapp.data.local.Note
 
 class AdapterNote() : RecyclerView.Adapter<AdapterNote.ViewHolder>() {
 
-    private var id: Int = 0
     private var notes: List<Note> = emptyList()
     fun addList(notes: List<Note>){
         this.notes = notes
@@ -36,7 +35,8 @@ class AdapterNote() : RecyclerView.Adapter<AdapterNote.ViewHolder>() {
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(itemView.context, titleNote.text.toString(), Toast.LENGTH_SHORT).show()
+                val id = notes[adapterPosition].id
+                Toast.makeText(itemView.context, id.toString(), Toast.LENGTH_SHORT).show()
             }
         }
     }
